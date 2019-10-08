@@ -1,6 +1,11 @@
 # Step 1: Environment setup
-./env_setup.sh
+install Python any verison
+install Kafka
+install Redis
+insall Curl
+install git
 
+ 
 # Step 2: install librabries
 sudo apt install python-pip
 pip install redis
@@ -9,7 +14,7 @@ pip install websocket-client
 pip install -r requirements.txt
 
 # Step 3: run kafka, zookeeper and redis containers
-docker-compose -f kafka-redis-dockercompose.yml up -d
+Start Kafka and Redis Server
 
 
 # Step 4: start kafka consumer - open another terminal
@@ -47,5 +52,5 @@ curl http://localhost:3330/high_value_addr/
 <<
 Explanation:
 this will start python restfulwebservice on flask server.
-run the above curl to test or you can use POSTman rest client 
+run the above curl 
 >>
