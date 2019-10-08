@@ -9,9 +9,5 @@ def get_transactions():
    print("message%s" % (r.mget(start, end)))
    return r.mget(start, end)
 
-def get_transactions_per_minute(minute):
-   #r = redis.Redis(host='localhost', port=6379, db=0)
-   return "TO-DO, Implementation pending"
 
-def get_high_value_addr():
-   return "TO-DO, Implementation pending"
+
