@@ -45,10 +45,11 @@ cd rest/
 python app.py
 
 #Step 7: execute below Curl Command to get the results --- Open another terminal
+ 
+curl http://localhost:3330/show_transactions/   (Success Implementation)
 
-curl http://localhost:3330/show_transactions/
-curl http://localhost:3330/transactions_count_per_minute/
-curl http://localhost:3330/high_value_addr/
+curl http://localhost:3330/transactions_count_per_minute/  (Pending Implementation)
+curl http://localhost:3330/high_value_addr/ (Pending Implementation)
 <<
 Explanation:
 this will start python restfulwebservice on flask server.
