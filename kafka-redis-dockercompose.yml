@@ -1,4 +1,3 @@
-#   docker-compose -f kafka-redis-dockercompose.yml up -d ###
 ---
 version: '2'
 services:
