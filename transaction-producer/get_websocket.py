@@ -22,7 +22,7 @@ def on_close(ws):
 def on_open(ws):
     def run(*args):
         while True:
-           # run the timer for 60 secounds to calculate transaction_rate
+           # running the timer for 60 secounds to calculate transaction_rate
            endtime = time.time() + 60
            while time.time() < endtime:
              time.sleep(1)
