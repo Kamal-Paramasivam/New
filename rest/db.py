@@ -1,6 +1,7 @@
 import redis
 import json
 # This function will return last 100 transactions from DB
+#show_transactions#
 def get_transactions():
    r = redis.Redis(host='localhost', port=6379, db=0)
    start = r.llen("transactions")-100
@@ -8,6 +9,7 @@ def get_transactions():
    data = r.lrange("transactions", start, end)  
    return data
 
+#transactions_count_per_minute
 def get_transactions_per_minute(minute):
    r = redis.Redis(host='localhost', port=6379, db=0)
    # one record for every 1 minute, so last 60 minutes - last 1 hr data
@@ -40,9 +42,9 @@ def get_transactions_per_minute(minute):
         i = i-1       
      i = i+1
    return '{ minute: '+str(minute)+ ', counts: ' + str(aggregate_list) + '}'
-   #return aggregate_list
    
-
+   
+#high_value_addr
 def get_high_value_addr():
    r = redis.Redis(host='localhost', port=6379, db=0)
    data = r.lrange("transactions", 0, -1)
