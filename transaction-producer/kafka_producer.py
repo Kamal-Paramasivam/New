@@ -12,6 +12,7 @@ def transaction_producer(transaction):
   # configure multiple retries
   producer = KafkaProducer(retries=5)
 
+#New Topic for Transaction Rate  
 def transaction_rate(msg_count):
   data = str(msg_count)
   producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
